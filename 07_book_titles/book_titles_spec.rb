@@ -11,7 +11,7 @@ describe Book do
   describe 'title' do
     it 'should capitalize the first letter' do
       # @book is a variable that was defined in the before do-end block.
-      @book.title = "inferno"
+      @book.title= "inferno"
       @book.title.should == "Inferno"
       # Another way of saying these two lines is after we set the title of the book, when we get its title
       # it should be capitalized properly. 
