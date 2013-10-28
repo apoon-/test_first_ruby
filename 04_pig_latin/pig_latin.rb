@@ -1,4 +1,3 @@
-vowels = ["a","e","i","o","u"]
 
 def translate(string)
   string = string.split(" ")
@@ -7,8 +6,9 @@ def translate(string)
 end
 
 def piggify(word)
+  except = ["a", "e", "i", "o", "u"]
   word = word.split("")
-  array_index = word.index {|letter| vowels.include?(letter)}
-  array_index += 1 if word[array_index-1].downcase == "q"
+  array_index = word.index {|x| except.include?(x)}
+  array_index += 1 if word[array_index - 1] == "q"
   return "#{word.rotate(array_index).join}ay"
 end
