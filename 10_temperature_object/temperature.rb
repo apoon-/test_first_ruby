@@ -1,9 +1,9 @@
 module Conversions
-  def ftoc(f)
+  def self.ftoc(f)
     c = ((f-32)*5)/9
   end
 
-  def ctof(c)
+  def self.ctof(c)
     f = (c*1.8)+32
   end
 end
@@ -23,4 +23,27 @@ class Temperature
     @conversion_type == :c ? @temperature_value : Conversions::ftoc(@temperature_value) 
   end
 
+  def self.in_celsius(value)
+    Temperature.new({:c => value})
+  end
+
+  def self.in_fahrenheit(value)
+    Temperature.new({:f => value})
+  end
+
 end
+
+class Celsius < Temperature
+  def initialize(temp)
+    @conversion_type = :c
+    @temperature_value = temp
+  end
+end
+
+class Fahrenheit < Temperature
+  def initialize (temp)
+    @conversion_type = :f
+    @temperature_value = temp 
+  end
+end
+

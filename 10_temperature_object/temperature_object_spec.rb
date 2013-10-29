@@ -41,7 +41,7 @@ describe Temperature do
 
         it "at an arbitrary temperature" do
           Temperature.new({:f => 68}).to_celsius.should == 20
-        end
+        # end
       end
     end
 
@@ -137,3 +137,4 @@ end
 
 # There are two extra credit problems if you feel you're up for them by the way!
 # The folders for them are called bonus_dictionary and bonus_rpn_dictionary
+end
