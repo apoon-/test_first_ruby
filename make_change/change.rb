@@ -9,7 +9,7 @@ class Changer
     # change = [quarter, dime, nickel, penny]
     # penny = 1
     # nickel = 5 * penny
-    # dime = 10 * nickel
+    # dime = 10 * penny
     # quarter = 25 * penny
 
   def self.make_change(cents)
